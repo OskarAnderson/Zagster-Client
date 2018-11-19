@@ -1,4 +1,5 @@
 const Base_URL = "https://zagster-service.herokuapp.com"
+
 const STATIONS = {
     'columbia_simpson': {
       latitudeRange: {min: 44.048745, max: 44.049205},
@@ -39,7 +40,7 @@ $(updateView)
 
 function updateView() {
     $.getJSON(Base_URL + "/rides/count" , (updateRidecount))
-    $.getJSON(Base_URL + "/rides/count/:station", (updateRidecountstation))
+    $.getJSON(Base_URL + "/rides/count/g5", (updateridecountstation))
 
 }
 
@@ -48,14 +49,14 @@ function updateRidecount(data) {
     $("h2#ridecount").html(numberofRides)
     console.log(data)
 }
-function updateRidecountstation(data) {
+function updateridecountstation(data) {
+    numberofRides = data.count
+    $("h3#ridecountstation").html(numberofRides)
     console.log(data)
 }
 
 
 
 
-  
-  module.exports = STATIONS
 
 
