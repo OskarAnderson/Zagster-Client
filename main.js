@@ -36,7 +36,7 @@ const STATIONS = {
   }
 
 
-$(updateView)
+$ (updateView)
 
 function updateView() {
     $.getJSON(Base_URL + "/rides/count" , (updateRidecount))
@@ -50,8 +50,8 @@ function updateRidecount(data) {
     console.log(data)
 }
 function updateridecountstation(data) {
-    numberofRides = data.count
-    $("h3#ridecountstation").html(numberofRides)
+    numberofrides = data.count
+    $("h3#ridecountstation").html(numberofrides)
     console.log(data)
 }
 

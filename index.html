@@ -4,12 +4,14 @@
 <head>
 	<meta charset="utf-8">
     <title>Zagster Bikes in Bend</title>
-    <script
-src="https://code.jquery.com/jquery-3.3.1.min.js"
-integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-crossorigin="anonymous"></script>
-    <script src="main.js"> </script> 
-    <link rel="stylesheet" href="main.css">
+<script>integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=";
+crossorigin="anonymous"</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script src="main.js"> </script> 
+<link rel="stylesheet" href="main.css">
 
     
 </head>
@@ -26,6 +28,63 @@ crossorigin="anonymous"></script>
 
 <p> a simple bubble chart would go here showing the number of rides per station per year</p>
 
+<canvas id="myChart" width="500" height="500"></canvas>
+<script type="text/javascript">
+
+    var ctx = document.getElementById("myChart").getContext("2d");
+
+    var myBarChart = new Chart(ctx, {
+        type: 'bubble',
+        data: { labels: ["January", "February", "March", "April", "May", "June", "July", "beans", "are", "great"]},
+        options: {
+            // Elements options apply to all of the options unless overridden in a dataset
+            // In this case, we are setting the border of each bar to be 2px wide and green
+            elements: {
+                rectangle: {
+                    borderWidth: 20,
+                    borderColor: 'rgb(25, 255, 150)',
+                    borderSkipped: 'bottom'
+                }
+            },
+            responsive: true,
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Zagster station use'
+            }
+        }
+    });
+
+        
+    var data = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        { data: [65, 59, 80, 81, 56, 55, 40],
+            label: "My First dataset",
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1,
+           
+        }
+    ]
+};
+    </script>
 
 </body>
 </html>
