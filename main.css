@@ -2,12 +2,15 @@
 h1 {
         color: dimgray;
         text-align: center;
-        font-family: 'tahoma'
+        font-family: 'tahoma';
+        background-image: url("https://static1.squarespace.com/static/57672633e6f2e136d51d0a2d/t/591ca3292994ca46718232cd/1495049010049/Artboard+1logo1.png?format=750w");
 }
 h2 { 
         font-size: "30";
         text-align: center;
         color: red
+        
+
 }
 body { 
         font-family: timesnewroman, sans-serif;
@@ -28,7 +31,10 @@ h3 {
 
 
 }
+div {
+        background-color: white;
 
+}
 hr {
     display: block;
     height: 2px;

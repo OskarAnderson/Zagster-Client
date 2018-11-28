@@ -12,9 +12,11 @@ function updateView() {
 
 }
 
+
 function updateRidecount(data) { 
     numberofRides = data.count
     $("h2#ridecount").html(numberofRides)
+    $("h2#ridecount").css('visibility', 'visible').hide().fadeIn("fast");
     console.log(data)
 }
 function displayridecountperyear(data) {
