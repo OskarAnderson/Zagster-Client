@@ -38,9 +38,9 @@ crossorigin="anonymous"</script>
                 label: '# of rides',
                 data: [data['2016'], data['2017'], data['2018']],
                 backgroundColor: [
-                    'rgba(255, 0, 0, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(139, 0, 0, 0.2)',
                     'rgba(255, 255, 0, 0.2)',
+                    'rgba(0, 0, 0, 0.2)',
           
                 ],
                 borderColor: [
@@ -49,18 +49,10 @@ crossorigin="anonymous"</script>
                     'rgba(0, 0, 0, 1)',
                    
                 ],
-                borderWidth: 1
+                borderWidth: 2
             }]
         },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
-            }
-        }
+        
     })};
     </script>
 
@@ -70,6 +62,9 @@ crossorigin="anonymous"</script>
    
 <p> This is a doughnut chart showing the number of rides per year at all Zagster stations. The data is being directly pulled and updated from the heroku app. As Zagster continues to grow, it will be easy to add new years with new data.
     I chose a white background so the chart is easier to read. 
-    The presented graph could be used to show potential investors as to why Zagster is a viable businees to invest in. </p>
+    <br>
+    <br>
+
+    The presented graph could be used if Zagster was trying to expand in Bend, potential investors would see the large growth that has happen within the past 3 years. </p>
 </body>
 </html>
