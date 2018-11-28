@@ -1,18 +1,39 @@
+
+h1 {
+        color: dimgray;
+        text-align: center;
+        font-family: 'tahoma'
+}
+h2 { 
+        font-size: "30";
+        text-align: center;
+        color: red
+}
 body { 
         font-family: timesnewroman, sans-serif;
         background-color: powderblue;
 
 }
-h1 {
-        color: dimgray;
-
-}
-h2 { 
-        font-size: "16"
-}
-
 p { 
         font-size: "18"
         color: black;
-        font-family: sans-serif
+        font-family: verdana;
+        text-align: center;
+   
+}
+h3 {
+        font-size: "20";
+        text-align: center;
+        
+
+
+}
+
+hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 3px solid black;
+    margin: 1em 0;
+    padding: 0;
 }

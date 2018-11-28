@@ -16,18 +16,22 @@ crossorigin="anonymous"</script>
     
 </head>
 <body>
+    
 <script src="main.js"> </script> 
 <h1> Zagster Bikes in Bend </h1>
-<p> Total rides</p>
-<h2 id="ridecount">In progress</h2>
-<p> This number shows the total number of rides from all years</p>
 
-    <canvas id="myChart" width="400" height="400"></canvas>
+<h2 id="ridecount">In progress</h2> <p> Rides and counting...</p>
+<p> 
+
+
+<hr>
+<h3>Zagster Rides: 2016, 2017, 2018 </h3>
+<div> <canvas id="myChart" width="300""></canvas>
     <script>
     function displayridecountperyear(data){
     var ctx = document.getElementById("myChart").getContext('2d');
     var myChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'doughnut',
         data: {
             labels: ["2016", "2017", "2018"],
             datasets: [{
@@ -61,7 +65,10 @@ crossorigin="anonymous"</script>
     </script>
 
 
-  
-<p> This is a bar chart showing the number of rides per year. If you look in the console you can see the updated data being pulled from the herokuapp. THe data is bring grabbed on line 23 in main.js</p>
+  </div>
+</p>
+   
+<p> This is a doughnut chart showing the number of rides per year. The data is being directly pulled and updated from the heroku app. This chart shows the growing popularity of zagster in Bend. 
+    This graph could be used to show potential investors as to why zagster is a viable businees to invest in</p>
 </body>
 </html>
