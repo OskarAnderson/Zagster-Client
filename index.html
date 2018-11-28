@@ -10,46 +10,40 @@ crossorigin="anonymous"</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
-<script src="main.js"> </script> 
+
 <link rel="stylesheet" href="main.css">
 
     
 </head>
 <body>
-
+<script src="main.js"> </script> 
 <h1> Zagster Bikes in Bend </h1>
 <p> Total rides</p>
 <h2 id="ridecount">In progress</h2>
-<p> Rides at station: g5</p>
-<h3 id="ridecountstation"> Rides per station (g5) </h2>
+<p> This number shows the total number of rides from all years</p>
 
     <canvas id="myChart" width="400" height="400"></canvas>
     <script>
+    function displayridecountperyear(data){
     var ctx = document.getElementById("myChart").getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange", "black"],
+            labels: ["2016", "2017", "2018"],
             datasets: [{
-                label: '# of Votes',
-                data: [12, 19, 3, 5, 2, 3, 8],
+                label: '# of rides',
+                data: [data['2016'], data['2017'], data['2018']],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)',
-                    'rgba(244, 164, 52, 0.2)'
+                    'rgba(0, 0, 0, 0.2)',
+          
                 ],
                 borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)',
-                    'rgba(244, 164, 52, 1)'
+                    'rgba(0, 0, 0,1)',
+                    'rgba(0, 0, 0, 1)',
+                    'rgba(0, 0, 0, 1)',
+                   
                 ],
                 borderWidth: 1
             }]
@@ -63,13 +57,11 @@ crossorigin="anonymous"</script>
                 }]
             }
         }
-    });
+    })};
     </script>
 
 
-
-
   
-<p> This is the outline of a bar chart, appropriate data is in the dataset and no errors are appearing in the console.</p>
+<p> This is a bar chart showing the number of rides per year. If you look in the console you can see the updated data being pulled from the herokuapp. THe data is bring grabbed on line 23 in main.js</p>
 </body>
 </html>

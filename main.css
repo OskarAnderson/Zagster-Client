@@ -1,14 +1,18 @@
-
 body { 
         font-family: timesnewroman, sans-serif;
-}
+        background-color: powderblue;
 
+}
+h1 {
+        color: dimgray;
+
+}
 h2 { 
         font-size: "16"
 }
 
 p { 
         font-size: "18"
-
+        color: black;
         font-family: sans-serif
 }
